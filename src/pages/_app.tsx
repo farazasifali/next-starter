@@ -5,10 +5,11 @@ import 'assets/styles/style.scss';
 import { isRTL } from 'utils/translation.helpers';
 
 function MyApp({ Component, pageProps }: AppProps) {
-
+  //Getting router instance
   const router = useRouter();
+  //Determint content direction
   const RTL = isRTL(router.locale as string);
-
+  //Return JSX
   return (
     <div dir={RTL ? 'rtl' : 'ltr'}>
       <Component {...pageProps} x={5} />
